@@ -1,0 +1,100 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5e8e8;
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  padding: 60px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #7a7e7e;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+  background-color: #555;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+.home,
+.contact,
+.about,
+.photos,
+.login {
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Login form styles */
+.login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login form label {
+  margin-bottom: 5px;
+}
+
+.login form input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 200px;
+}

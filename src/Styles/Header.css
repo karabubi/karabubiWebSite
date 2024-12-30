@@ -1,0 +1,69 @@
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling the header with a background image */
+.header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+/* Semi-transparent overlay for better contrast */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+  z-index: 1; /* Ensures the overlay stays behind content */
+}
+
+/* Styling the header content */
+.header-content {
+  position: relative;
+  z-index: 2; /* Keeps content above overlay */
+  color: #fff;
+}
+
+/* Main heading (name) styling */
+.header-content h1 {
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Responsive design for medium screens */
+@media (max-width: 768px) {
+  .header {
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .header-content h1 {
+    font-size: 2.5em;
+  }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+  .header {
+    height: 250px; /* Further reduce height */
+  }
+
+  .header-content h1 {
+    font-size: 2em;
+  }
+}

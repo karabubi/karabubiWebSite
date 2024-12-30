@@ -1,0 +1,123 @@
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: rgb(126, 106, 71);
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for main content with a clean background */
+.container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(54, 51, 51);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section with a background image and centered text */
+.box1 {
+  text-align: center;
+  padding: 60px;
+  background-image: url("Web2.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
+  position: relative; /* Allow absolute positioning for child elements */
+}
+
+/* Header text with adjusted font size and white color */
+.box1 h2 {
+  color: white;
+  font-size: 2.5em;
+}
+
+/* Profile image with animation */
+.box1-image {
+  width: 150px; /* Set width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circular image */
+  position: absolute; /* Position it absolutely */
+  right: 20px; /* Position it 20px from the right */
+  bottom: 20px; /* Position it 20px from the bottom */
+  animation-name: slideUp; /* Apply slideUp animation */
+  animation-duration: 2s; /* Set animation duration */
+  opacity: 0.7; /* Set transparency */
+}
+
+/* Slide-up animation for profile image */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%); /* Start from below */
+    opacity: 0; /* Start as fully transparent */
+  }
+  100% {
+    transform: translateY(0); /* End at original position */
+    opacity: 0.7; /* Final opacity */
+  }
+}
+
+/* Navigation bar styling */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive design for smaller screens */
+@media only screen and (max-width: 600px) {
+  .box1 h2 {
+    font-size: 1.5em;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+}
+.footer {
+  background-color: #303641;
+}
+
+/* Footer section */
+footer p {
+  text-align: center;
+  padding: 1em 0;
+  background-color: #303641;
+  color: #fff;
+  border-radius: 0 0 5px 5px;
+}
+
+/* Additional styles for login form, etc. remain unchanged */

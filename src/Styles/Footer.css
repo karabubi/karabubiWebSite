@@ -1,0 +1,25 @@
+/* Footer styles */
+.footer {
+  background-color: #1e1d1d; /* Dark background, same as navbar */
+  color: #fff; /* White text */
+  text-align: center; /* Center the text */
+  padding: 15px 0; /* Padding for spacing */
+  width: 100%; /* Full width */
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.footer p {
+  color: white;
+}
+
+/* Responsive design: Adjust font size on smaller screens */
+@media (max-width: 600px) {
+  .footer {
+    font-size: 1.9rem;
+  }
+}

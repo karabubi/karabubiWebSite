@@ -1,0 +1,53 @@
+.contact-admin {
+  display: none;
+  background-color: #f5e8e8;
+  padding: 25px;
+  margin: 20px auto;
+  width: 400px; /* Increased the width */
+  text-align: left;
+  border: 6px solid #424141;
+  border-radius: 2ch;
+  color: #11057a;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3cqb;
+  font-weight: bold;
+}
+
+.contact-admin .success {
+  color: green;
+  font-weight: bold;
+}
+
+.contact-admin .error {
+  color: red;
+  font-weight: bold;
+}
+
+.login form {
+  transition: all 0.3s ease-in-out;
+}
+
+.login form {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.login form.show {
+  opacity: 1;
+  height: auto;
+  display: none;
+  background-color: #f5e8e8;
+  padding: 25px;
+  margin: 20px auto;
+  width: 400px; /* Increased the width */
+  text-align: left;
+  border: 6px solid #424141;
+  border-radius: 2ch;
+  color: #11057a;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3cqb;
+  font-weight: bold;
+}

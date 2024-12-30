@@ -1,0 +1,77 @@
+/* Resetting default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the navbar container */
+.navbar {
+  padding: 10px 10px;
+  background-color: #101010; /* Navbar background color */
+  display: flex; /* Use flexbox for the navbar */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Align items vertically in the center */
+}
+
+/* Unordered list in the navbar */
+.nav-links {
+  list-style-type: none;
+  display: flex; /* Flexbox layout for horizontal alignment */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Align items vertically in the center */
+  margin-right: auto; /* Pushes the ul to the left */
+}
+
+/* List items in the navbar */
+.nav-links li {
+  margin: 0 10px; /* Smaller margin between items */
+}
+
+/* Link styling */
+.nav-links li a,
+.nav-login {
+  /* Apply styles to both links and buttons */
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 8px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for links and buttons */
+.nav-links li a:hover,
+.nav-login:hover {
+  background-color: #555; /* Slightly lighter background on hover */
+  color: #f0f0f0; /* Softer white text on hover */
+}
+
+/* Mobile-specific styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+    padding: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .nav-login {
+    margin-top: 10px; /* Add some space between the links and the login button */
+    width: 100%; /* Full width */
+    text-align: center; /* Center text */
+  }
+}
