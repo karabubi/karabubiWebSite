@@ -1,77 +1,157 @@
-/* Resetting default margin and padding for all elements */
+/* General reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Styling for the navbar container */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+}
+
+/* Navbar Styling */
 .navbar {
-  padding: 10px 10px;
-  background-color: #101010; /* Navbar background color */
-  display: flex; /* Use flexbox for the navbar */
-  justify-content: flex-end; /* Align items to the right */
-  align-items: center; /* Align items vertically in the center */
+  background-image: url("../assets/Web2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Unordered list in the navbar */
-.nav-links {
-  list-style-type: none;
-  display: flex; /* Flexbox layout for horizontal alignment */
-  justify-content: flex-end; /* Align items to the right */
-  align-items: center; /* Align items vertically in the center */
-  margin-right: auto; /* Pushes the ul to the left */
+.navbar .MuiAppBar-root {
+  background: transparent; /* Make AppBar transparent */
 }
 
-/* List items in the navbar */
-.nav-links li {
-  margin: 0 10px; /* Smaller margin between items */
-}
-
-/* Link styling */
-.nav-links li a,
-.nav-login {
-  /* Apply styles to both links and buttons */
-  display: inline-flex;
-  align-items: center;
+/* Navbar container */
+.navbar-title {
+  font-size: 1.8rem;
+  font-weight: 600;
   color: white;
-  background: none;
-  border: none;
-  font-size: 1.2em;
-  font-weight: 500;
-  padding: 8px 10px;
-  border-radius: 5px;
   text-decoration: none;
-  cursor: pointer;
+  padding: 0 15px;
+  display: inline-block;
+  text-align: center;
+}
+
+.navbar-title:hover {
+  color: #f1c40f; /* Color on hover */
+}
+
+/* Navbar links for larger screens */
+.navbar-links-left {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+
+.navbar-links-left .nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect for links and buttons */
-.nav-links li a:hover,
-.nav-login:hover {
-  background-color: #555; /* Slightly lighter background on hover */
-  color: #f0f0f0; /* Softer white text on hover */
+.navbar-links-left .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #f1c40f;
 }
 
-/* Mobile-specific styles for smaller screens */
+/* Button styling */
+.navbar-links-left button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-links-left button:hover {
+  background-color: #2980b9;
+}
+
+/* Hamburger menu */
+.menu-icon-button {
+  color: white;
+}
+
+.menu-icon {
+  font-size: 2rem;
+}
+
+/* Mobile Menu (Hamburger) */
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu.open {
+  display: block;
+}
+
+.mobile-menu .MuiMenuItem-root {
+  background-color: #34495e;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+}
+
+.mobile-menu .MuiMenuItem-root:hover {
+  background-color: #2c3e50;
+}
+
+/* Avatar Menu */
+.MuiAvatar-root {
+  width: 40px;
+  height: 40px;
+}
+
+/* User menu for mobile */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column; /* Stack items vertically */
+  .navbar-links-left {
+    display: none;
   }
 
-  .nav-links {
-    flex-direction: column; /* Stack items vertically */
-    width: 100%; /* Full width */
-    padding: 10px;
+  .mobile-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    z-index: 100;
   }
 
-  .nav-links li {
-    margin: 10px 0;
+  .navbar .menu-icon-button {
+    display: block;
   }
 
-  .nav-login {
-    margin-top: 10px; /* Add some space between the links and the login button */
-    width: 100%; /* Full width */
-    text-align: center; /* Center text */
+  .navbar-title {
+    display: block;
+    font-size: 1.5rem;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-title {
+    font-size: 1.25rem;
+  }
+
+  .navbar-links-left .nav-link {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .navbar-links-left button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
   }
 }
